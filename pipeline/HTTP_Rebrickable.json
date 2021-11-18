@@ -61,7 +61,13 @@
 				"outputs": [
 					{
 						"referenceName": "ADLS_wmadatalake",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"FileName": {
+								"value": "@pipeline().parameters.FileName",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}
