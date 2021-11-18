@@ -49,7 +49,10 @@
 				"inputs": [
 					{
 						"referenceName": "HTTP_Rebrickable",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"FileName": "themes.csv"
+						}
 					}
 				],
 				"outputs": [
