@@ -1,0 +1,9 @@
+{
+	"name": "HTTP_Rebrickable",
+	"properties": {
+		"folder": {
+			"name": "Rebrickable"
+		},
+		"annotations": []
+	}
+}
