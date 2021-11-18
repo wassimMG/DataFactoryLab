@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy HTTP_Rebrickable",
+				"name": "Copy HTTP_Rebrickable_to_ADLS",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
