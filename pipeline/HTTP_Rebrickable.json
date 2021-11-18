@@ -51,7 +51,10 @@
 						"referenceName": "HTTP_Rebrickable",
 						"type": "DatasetReference",
 						"parameters": {
-							"FileName": "themes.csv"
+							"FileName": {
+								"value": "@pipeline().parameters.FileName",
+								"type": "Expression"
+							}
 						}
 					}
 				],
@@ -63,6 +66,12 @@
 				]
 			}
 		],
+		"parameters": {
+			"FileName": {
+				"type": "String",
+				"defaultValue": "FileName"
+			}
+		},
 		"folder": {
 			"name": "Rebrickable"
 		},
