@@ -62,8 +62,8 @@
 				}
 			},
 			{
-				"name": "Set List Of Files",
-				"type": "SetVariable",
+				"name": "ForEach1",
+				"type": "ForEach",
 				"dependsOn": [
 					{
 						"activity": "If Condition1",
@@ -74,11 +74,32 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
-					"variableName": "ListOfFiles",
-					"value": {
-						"value": "Load@{length(variables('Files'))} files:@{join(variables('Files'),',')}",
+					"items": {
+						"value": "@variables('Files')",
 						"type": "Expression"
-					}
+					},
+					"isSequential": false,
+					"activities": [
+						{
+							"name": "Execute Lego HTTP to ADLS",
+							"type": "ExecutePipeline",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"pipeline": {
+									"referenceName": "HTTP_Rebrickable",
+									"type": "PipelineReference"
+								},
+								"waitOnCompletion": true,
+								"parameters": {
+									"FileName": {
+										"value": "@item()",
+										"type": "Expression"
+									}
+								}
+							}
+						}
+					]
 				}
 			}
 		],
