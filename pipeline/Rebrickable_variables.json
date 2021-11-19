@@ -60,6 +60,26 @@
 						}
 					]
 				}
+			},
+			{
+				"name": "Set List Of Files",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "If Condition1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "ListOfFiles",
+					"value": {
+						"value": "Load@{length(variables('Files'))} files:@{join(variables('Files'),',')}",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"parameters": {
