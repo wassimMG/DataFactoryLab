@@ -1,0 +1,9 @@
+{
+	"name": "wma-adf-test",
+	"location": "francecentral",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "cb2f622b-acda-46b7-92fa-3d957b29abd7",
+		"tenantId": "d6397071-8e3e-45d2-a2d6-36698acf0fea"
+	}
+}
